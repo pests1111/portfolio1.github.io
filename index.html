@@ -8,6 +8,70 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<!-- Scoped styles for the new "Free Time" section. Self-contained so it drops in
+     cleanly even if style.css doesn't define these classes yet. Feel free to move
+     this into style.css and delete this block if you'd rather keep one stylesheet. -->
+<style>
+  .freetime{ padding: 5rem 0; }
+  .freetime-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+    margin-top: 2.5rem;
+  }
+  @media (max-width: 900px){
+    .freetime-grid{ grid-template-columns: 1fr; }
+  }
+  .freetime-card{
+    background: #14141a;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .freetime-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+  }
+  .freetime-photo{
+    width: 100%;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+  }
+  .freetime-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .freetime-body{
+    padding: 1.25rem 1.4rem 1.5rem;
+  }
+  .freetime-tag{
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #f2c94c;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .freetime-body h3{
+    margin: 0 0 0.5rem;
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 1.3rem;
+    color: #fff;
+  }
+  .freetime-body p{
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.72);
+  }
+</style>
 </head>
 <body>
 
@@ -21,6 +85,7 @@
       <a href="#education">Education</a>
       <a href="#experience">Experience</a>
       <a href="#highlights">Highlights</a>
+      <a href="#freetime">Free Time</a>
       <a href="#achievements">Achievements</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -207,6 +272,49 @@
           <span class="project-tag">Academics &middot; UiTM</span>
           <h3>Dual Qualification, 3.84 &amp; 3.87 CGPA</h3>
           <p>Currently pursuing a Bachelor’s Degree in Operations Management, with a Diploma in Business Studies completed at UiTM. Interested in Supply Chain Management, Logistics, and Operations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FREE TIME -->
+<section class="freetime" id="freetime">
+  <div class="section-container">
+    <p class="eyebrow center">Outside the Classroom</p>
+    <h2 class="center">Free Time</h2>
+
+    <div class="freetime-grid">
+      <div class="freetime-card">
+        <div class="freetime-photo">
+          <img src="images/freetime-hiking.jpg" alt="Standing at the Puncak Gunung Datuk summit sign, 855 meters" loading="lazy">
+        </div>
+        <div class="freetime-body">
+          <span class="freetime-tag">Hiking</span>
+          <h3>Chasing Summits</h3>
+          <p>Hiking is how I reset. Reaching the peak of Gunung Datuk (855m) was a reminder that the same discipline that gets me through deadlines is what gets you up a mountain — one steady step at a time.</p>
+        </div>
+      </div>
+
+      <div class="freetime-card">
+        <div class="freetime-photo">
+          <img src="images/freetime-warehouse.jpg" alt="Working on the sorting floor at DDR Sorting Centre" loading="lazy">
+        </div>
+        <div class="freetime-body">
+          <span class="freetime-tag">On the Job</span>
+          <h3>Life on the Sorting Floor</h3>
+          <p>A behind-the-scenes look at my time at DDR Sorting Centre, Port Klang — moving parcels and keeping the line running during my time as Department Leader. Not glamorous, but it's where I learned real operational discipline.</p>
+        </div>
+      </div>
+
+      <div class="freetime-card">
+        <div class="freetime-photo">
+          <img src="images/freetime-snooker.jpg" alt="Playing snooker, lining up a shot at the table" loading="lazy">
+        </div>
+        <div class="freetime-body">
+          <span class="freetime-tag">Snooker</span>
+          <h3>Racking Up Some Focus</h3>
+          <p>When I'm not studying or working, you'll probably find me at the snooker table. It's a game of patience and precision — plan the shot, control the angle, stay calm under pressure.</p>
         </div>
       </div>
     </div>
