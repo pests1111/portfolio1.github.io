@@ -6,72 +6,8 @@
 <title>Muhammad Nabil Hakim | Student Leader &amp; Future Professional</title>
 <meta name="description" content="Portfolio of Muhammad Nabil Hakim — student, leader, future professional. Business Studies & Operation Management, Universiti Teknologi MARA.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
-<!-- Scoped styles for the new "Free Time" section. Self-contained so it drops in
-     cleanly even if style.css doesn't define these classes yet. Feel free to move
-     this into style.css and delete this block if you'd rather keep one stylesheet. -->
-<style>
-  .freetime{ padding: 5rem 0; }
-  .freetime-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.75rem;
-    margin-top: 2.5rem;
-  }
-  @media (max-width: 900px){
-    .freetime-grid{ grid-template-columns: 1fr; }
-  }
-  .freetime-card{
-    background: #14141a;
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.08);
-    display: flex;
-    flex-direction: column;
-    transition: transform .25s ease, box-shadow .25s ease;
-  }
-  .freetime-card:hover{
-    transform: translateY(-4px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.35);
-  }
-  .freetime-photo{
-    width: 100%;
-    aspect-ratio: 4/5;
-    overflow: hidden;
-  }
-  .freetime-photo img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .freetime-body{
-    padding: 1.25rem 1.4rem 1.5rem;
-  }
-  .freetime-tag{
-    display: inline-block;
-    font-size: 0.72rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #f2c94c;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-  }
-  .freetime-body h3{
-    margin: 0 0 0.5rem;
-    font-family: "Big Shoulders Display", sans-serif;
-    font-size: 1.3rem;
-    color: #fff;
-  }
-  .freetime-body p{
-    margin: 0;
-    font-size: 0.92rem;
-    line-height: 1.55;
-    color: rgba(255,255,255,0.72);
-  }
-</style>
 </head>
 <body>
 
@@ -92,7 +28,7 @@
 
     <a href="Nabil_Hakim_Resume.pdf" download class="btn btn-glow nav-cta">Download Resume</a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -106,20 +42,21 @@
 
   <div class="hero-caption section-container">
     <div class="hero-caption-text">
-      <p class="tagline">Discipline builds freedom.</p>
-      <p class="hero-sub">Business Studies &amp; Operation Management student at Universiti Teknologi MARA, building his path through student leadership and hands-on operations experience — one deliberate step at a time.</p>
-    </div>
-
-    <div class="socials">
-      <a href="https://www.instagram.com/nabilhakim168" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2c2.7 0 3 .01 4.1.06 1.1.05 1.85.22 2.5.48.68.26 1.25.62 1.82 1.18.56.56.92 1.14 1.18 1.82.26.65.43 1.4.48 2.5.05 1.1.06 1.4.06 4.1s-.01 3-.06 4.1c-.05 1.1-.22 1.85-.48 2.5-.26.68-.62 1.25-1.18 1.82-.56.56-1.14.92-1.82 1.18-.65.26-1.4.43-2.5.48-1.1.05-1.4.06-4.1.06s-3-.01-4.1-.06c-1.1-.05-1.85-.22-2.5-.48a4.9 4.9 0 0 1-1.82-1.18 4.9 4.9 0 0 1-1.18-1.82c-.26-.65-.43-1.4-.48-2.5C2.01 15 2 14.7 2 12s.01-3 .06-4.1c.05-1.1.22-1.85.48-2.5.26-.68.62-1.25 1.18-1.82A4.9 4.9 0 0 1 5.54 1.94c.65-.26 1.4-.43 2.5-.48C9.14 1.41 9.4 1.4 12.13 1.4L12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-8.4a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4z"/></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/muhammad-nabil-hakim-b184a4427/" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-1 1.83-2 3.77-2 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.02-3-1.83-3-1.83 0-2.1 1.43-2.1 2.9V21h-4V9z"/></svg>
-      </a>
-      <a href="mailto:nabilhakim1685@gmail.com" aria-label="Email">
-        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5 7.3 5.85a.8.8 0 0 0 1 0L19.8 6H4.2zM4 8.1V18h16V8.1l-7.13 5.7a2.3 2.3 0 0 1-2.74 0L4 8.1z"/></svg>
-      </a>
+      <p class="hero-kicker">Business Studies &amp; Operation Management &middot; Universiti Teknologi MARA</p>
+      <a href="#contact" class="hero-link">Get in Touch</a>
+      <h1 class="tagline">Discipline<br>Builds Freedom</h1>
+      <p class="hero-sub">Building his path through student leadership and hands-on operations experience — one deliberate step at a time.</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/nabilhakim168" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 2c2.7 0 3 .01 4.1.06 1.1.05 1.85.22 2.5.48.68.26 1.25.62 1.82 1.18.56.56.92 1.14 1.18 1.82.26.65.43 1.4.48 2.5.05 1.1.06 1.4.06 4.1s-.01 3-.06 4.1c-.05 1.1-.22 1.85-.48 2.5-.26.68-.62 1.25-1.18 1.82-.56.56-1.14.92-1.82 1.18-.65.26-1.4.43-2.5.48-1.1.05-1.4.06-4.1.06s-3-.01-4.1-.06c-1.1-.05-1.85-.22-2.5-.48a4.9 4.9 0 0 1-1.82-1.18 4.9 4.9 0 0 1-1.18-1.82c-.26-.65-.43-1.4-.48-2.5C2.01 15 2 14.7 2 12s.01-3 .06-4.1c.05-1.1.22-1.85.48-2.5.26-.68.62-1.25 1.18-1.82A4.9 4.9 0 0 1 5.54 1.94c.65-.26 1.4-.43 2.5-.48C9.14 1.41 9.4 1.4 12.13 1.4L12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-8.4a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/muhammad-nabil-hakim-b184a4427/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-1 1.83-2 3.77-2 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.02-3-1.83-3-1.83 0-2.1 1.43-2.1 2.9V21h-4V9z"/></svg>
+        </a>
+        <a href="mailto:nabilhakim1685@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5 7.3 5.85a.8.8 0 0 0 1 0L19.8 6H4.2zM4 8.1V18h16V8.1l-7.13 5.7a2.3 2.3 0 0 1-2.74 0L4 8.1z"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -154,8 +91,11 @@
 <!-- EDUCATION -->
 <section class="education" id="education">
   <div class="section-container">
-    <p class="eyebrow center">Where I've Studied</p>
-    <h2 class="center">Education</h2>
+    <div class="section-head">
+      <p class="eyebrow center">Where I've Studied</p>
+      <h2 class="center">Education</h2>
+      <span class="eyebrow-overlay">Where I've Studied</span>
+    </div>
 
     <div class="timeline">
       <div class="timeline-item">
@@ -180,11 +120,15 @@
 <!-- EXPERIENCE -->
 <section class="experience" id="experience">
   <div class="section-container">
-    <p class="eyebrow center">Where I've Led</p>
-    <h2 class="center">Experience</h2>
+    <div class="section-head">
+      <p class="eyebrow center">Where I've Led</p>
+      <h2 class="center">Experience</h2>
+      <span class="eyebrow-overlay">Where I've Led</span>
+    </div>
 
     <div class="experience-grid">
       <div class="exp-card">
+        <span class="corner-mark">↗</span>
         <span class="exp-tag">2025 — 2026</span>
         <h3>President</h3>
         <p class="exp-org">Generation Entrepreneur Club, Universiti Teknologi MARA</p>
@@ -196,6 +140,7 @@
       </div>
 
       <div class="exp-card">
+        <span class="corner-mark">↗</span>
         <span class="exp-tag">2022 — 2023</span>
         <h3>Department Leader</h3>
         <p class="exp-org">DDR Sorting Centre, Port Klang</p>
@@ -214,8 +159,11 @@
 <!-- SKILLS -->
 <section class="services" id="skills">
   <div class="section-container">
-    <p class="eyebrow center">What I Bring</p>
-    <h2 class="center">Skills</h2>
+    <div class="section-head">
+      <p class="eyebrow center">What I Bring</p>
+      <h2 class="center">Skills</h2>
+      <span class="eyebrow-overlay">What I Bring</span>
+    </div>
 
     <div class="services-grid">
       <div class="service-card">
@@ -247,11 +195,15 @@
 <!-- HIGHLIGHTS (portfolio, drawn from resume) -->
 <section class="projects" id="highlights">
   <div class="section-container">
-    <p class="eyebrow center">Portfolio</p>
-    <h2 class="center">Highlights</h2>
+    <div class="section-head">
+      <p class="eyebrow center">Portfolio</p>
+      <h2 class="center">Highlights</h2>
+      <span class="eyebrow-overlay">Portfolio</span>
+    </div>
 
     <div class="projects-grid">
-      <div class="project-card project-card-wide">
+      <div class="project-card project-card-wide project-card--photo" style="background-image: url('images/cert-president-1.jpg');">
+        <span class="corner-mark">↗</span>
         <div class="project-info">
           <span class="project-tag">Leadership &middot; Generation Entrepreneur Club</span>
           <h3>Building an Entrepreneurship Community at UiTM</h3>
@@ -259,7 +211,8 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card project-card--photo" style="background-image: url('images/freetime-warehouse.jpg');">
+        <span class="corner-mark">↗</span>
         <div class="project-info">
           <span class="project-tag">Operations &middot; DDR Sorting Centre</span>
           <h3>98% Stock Accuracy</h3>
@@ -268,6 +221,7 @@
       </div>
 
       <div class="project-card">
+        <span class="corner-mark">↗</span>
         <div class="project-info">
           <span class="project-tag">Academics &middot; UiTM</span>
           <h3>Dual Qualification, 3.84 &amp; 3.87 CGPA</h3>
@@ -281,11 +235,15 @@
 <!-- FREE TIME -->
 <section class="freetime" id="freetime">
   <div class="section-container">
-    <p class="eyebrow center">Outside the Classroom</p>
-    <h2 class="center">Free Time</h2>
+    <div class="section-head">
+      <p class="eyebrow center">Outside the Classroom</p>
+      <h2 class="center">Free Time</h2>
+      <span class="eyebrow-overlay">Outside the Classroom</span>
+    </div>
 
     <div class="freetime-grid">
       <div class="freetime-card">
+        <span class="corner-mark">↗</span>
         <div class="freetime-photo">
           <img src="images/freetime-hiking.jpg" alt="Standing at the Puncak Gunung Datuk summit sign, 855 meters" loading="lazy">
         </div>
@@ -297,6 +255,7 @@
       </div>
 
       <div class="freetime-card">
+        <span class="corner-mark">↗</span>
         <div class="freetime-photo">
           <img src="images/freetime-warehouse.jpg" alt="Working on the sorting floor at DDR Sorting Centre" loading="lazy">
         </div>
@@ -308,6 +267,7 @@
       </div>
 
       <div class="freetime-card">
+        <span class="corner-mark">↗</span>
         <div class="freetime-photo">
           <img src="images/freetime-beach.jpg" alt="Floating in the sea with boats on the horizon" loading="lazy">
         </div>
@@ -324,31 +284,40 @@
 <!-- ACHIEVEMENTS -->
 <section class="achievements" id="achievements">
   <div class="section-container">
-    <p class="eyebrow center">Recognition</p>
-    <h2 class="center">Achievements</h2>
+    <div class="section-head">
+      <p class="eyebrow center">Recognition</p>
+      <h2 class="center">Achievements</h2>
+      <span class="eyebrow-overlay">Recognition</span>
+    </div>
 
     <div class="achievements-grid">
       <div class="achv-card">
+        <span class="corner-mark">↗</span>
         <span class="achv-tag">Academic Excellence</span>
         <h3>CGPA 3.87</h3>
       </div>
       <div class="achv-card">
+        <span class="corner-mark">↗</span>
         <span class="achv-tag">Supply Chain Project</span>
         <h3>ARS Robotic Sorting Concept</h3>
       </div>
       <div class="achv-card">
+        <span class="corner-mark">↗</span>
         <span class="achv-tag">Operations Management</span>
         <h3>CPM/PERT &amp; Critical Path Analysis</h3>
       </div>
       <div class="achv-card">
+        <span class="corner-mark">↗</span>
         <span class="achv-tag">Business Innovation</span>
         <h3>GreenFit Smart Gardening Tool</h3>
       </div>
       <div class="achv-card">
+        <span class="corner-mark">↗</span>
         <span class="achv-tag">Leadership</span>
         <h3>Student Activities &amp; Team Collaboration</h3>
       </div>
       <div class="achv-card">
+        <span class="corner-mark">↗</span>
         <span class="achv-tag">Industry Exposure</span>
         <h3>Warehouse &amp; Parcel Sorting Operations</h3>
       </div>
@@ -383,8 +352,11 @@
 <section class="contact" id="contact">
   <div class="section-container contact-grid">
     <div class="contact-info contact-info-solo">
-      <p class="eyebrow">Get In Touch</p>
-      <h2>Let's build <span class="highlight">something</span></h2>
+      <div class="section-head">
+        <p class="eyebrow center">Get In Touch</p>
+        <h2>Let's build <span class="highlight">something</span></h2>
+        <span class="eyebrow-overlay">Get In Touch</span>
+      </div>
       <p>Open to internships, collaborations, and conversations about business, operations, or student leadership. Reach out however's easiest for you.</p>
 
       <div class="contact-detail">
