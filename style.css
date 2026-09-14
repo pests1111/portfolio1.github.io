@@ -603,13 +603,31 @@ h2{ font-size: clamp(2.4rem, 4.4vw, 3.6rem); }
   font-size: 1.05rem;
 }
 
-/* Cert gallery — 3 per row on desktop so each certificate is actually
-   legible; was 5 columns before, which made them tiny. */
+/* Cert gallery — 2 per row so each certificate reads at a size where
+   the fine print is actually legible. Each photo also opens in a
+   click-to-zoom lightbox (see .lightbox below) for a full-size look. */
 .cert-gallery{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.75rem;
   margin-top: 3.5rem;
+}
+
+.cert-trigger{
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: zoom-in;
+  text-align: left;
+}
+.cert-trigger:hover img,
+.cert-trigger:focus-visible img{
+  border-color: var(--accent);
 }
 
 .cert-item img{
@@ -618,12 +636,13 @@ h2{ font-size: clamp(2.4rem, 4.4vw, 3.6rem); }
   object-fit: contain;
   background: #fff;
   border: 1px solid var(--line);
-  padding: 0.5rem;
+  padding: 0.75rem;
+  transition: border-color 0.2s ease;
 }
 
 .cert-item figcaption{
-  margin-top: 0.85rem;
-  font-size: 0.78rem;
+  margin-top: 0.9rem;
+  font-size: 0.82rem;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -634,8 +653,69 @@ h2{ font-size: clamp(2.4rem, 4.4vw, 3.6rem); }
 /* The last (5th) certificate spans and centers on its own row so the
    grid doesn't leave an awkward lone item hugging the left edge. */
 .cert-gallery .cert-item:last-child{
-  grid-column: 2 / 3;
+  grid-column: 1 / -1;
+  max-width: 50%;
+  margin: 0 auto;
 }
+
+/* ===================== CERTIFICATE LIGHTBOX ===================== */
+
+.lightbox{
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem 1.5rem;
+  background: rgba(10,10,10,0.92);
+}
+.lightbox.open{ display: flex; }
+
+.lightbox-content{
+  position: relative;
+  max-width: min(90vw, 640px);
+  max-height: 90vh;
+  text-align: center;
+}
+
+.lightbox-content img{
+  display: block;
+  width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 0.6rem;
+  margin: 0 auto;
+}
+
+.lightbox-caption{
+  margin-top: 1.1rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.lightbox-close{
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.5);
+  background: transparent;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.lightbox-close:hover{ background: #fff; color: var(--ink); }
 
 /* ===================== CONTACT ===================== */
 
@@ -698,15 +778,15 @@ h2{ font-size: clamp(2.4rem, 4.4vw, 3.6rem); }
   .projects-grid,
   .freetime-grid,
   .achievements-grid{ grid-template-columns: 1fr; }
+}
 
-  .cert-gallery{ grid-template-columns: repeat(2, 1fr); }
-  .cert-gallery .cert-item:last-child{ grid-column: 1 / -1; max-width: 60%; margin: 0 auto; }
+@media (max-width: 640px){
+  .cert-gallery{ grid-template-columns: 1fr; gap: 2rem; }
+  .cert-gallery .cert-item:last-child{ grid-column: auto; max-width: 100%; }
+  .lightbox-close{ top: -2.6rem; }
 }
 
 @media (max-width: 560px){
   .section-container{ padding: 0 1.5rem; }
   .nav-container{ padding: 0 1.5rem; }
-
-  .cert-gallery{ grid-template-columns: 1fr; }
-  .cert-gallery .cert-item:last-child{ grid-column: auto; max-width: 100%; }
 }
