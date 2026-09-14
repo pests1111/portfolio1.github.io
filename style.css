@@ -220,7 +220,6 @@ h2{ font-size: clamp(2.4rem, 4.4vw, 3.6rem); }
   transition: background 0.2s ease, color 0.2s ease;
 }
 .btn:hover{ background: #fff; color: var(--ink); }
-.btn-glow{ }
 .nav-cta{ flex-shrink: 0; }
 
 .menu-toggle{
@@ -487,6 +486,7 @@ h2{ font-size: clamp(2.4rem, 4.4vw, 3.6rem); }
 .languages-line .eyebrow{ margin-bottom: 0; }
 
 /* ===================== HIGHLIGHTS / PROJECTS ===================== */
+/* Plain text cards — no photography here, keeps focus on the copy. */
 
 .projects{ padding: 6.5rem 0; border-bottom: 1px solid var(--line); }
 
@@ -495,13 +495,15 @@ h2{ font-size: clamp(2.4rem, 4.4vw, 3.6rem); }
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   margin-top: 3rem;
+  align-items: stretch;
 }
 
 .project-card{
   position: relative;
   border: 1px solid var(--line);
-  padding: 2.2rem;
   border-left: 3px solid var(--line);
+  padding: 2.2rem;
+  background: #fff;
   transition: border-left-color 0.2s ease;
 }
 .project-card:hover{ border-left-color: var(--accent); }
@@ -525,28 +527,6 @@ h2{ font-size: clamp(2.4rem, 4.4vw, 3.6rem); }
   margin-bottom: 0.75rem;
 }
 .project-info p{ font-size: 0.94rem; max-width: 62ch; }
-
-/* Framed photo variant — image sits in its own boxed panel above a
-   plain white caption panel, matching the Free Time card pattern. */
-.project-card--framed{
-  padding: 0;
-  border-left: 1px solid var(--line);
-  display: flex;
-  flex-direction: column;
-}
-.project-card--framed:hover{ border-left-color: var(--accent); }
-
-.project-photo{
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4/5;
-  overflow: hidden;
-  background: var(--surface);
-}
-.project-photo img{ width: 100%; height: 100%; object-fit: cover; }
-.project-photo .corner-mark{ color: var(--ink); background: rgba(255,255,255,0.85); }
-
-.project-card--framed .project-info{ padding: 1.7rem; border-top: 1px solid var(--line); }
 
 /* ===================== FREE TIME ===================== */
 
@@ -623,28 +603,38 @@ h2{ font-size: clamp(2.4rem, 4.4vw, 3.6rem); }
   font-size: 1.05rem;
 }
 
+/* Cert gallery — 3 per row on desktop so each certificate is actually
+   legible; was 5 columns before, which made them tiny. */
 .cert-gallery{
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   margin-top: 3.5rem;
 }
 
 .cert-item img{
   width: 100%;
   aspect-ratio: 3/4;
-  object-fit: cover;
+  object-fit: contain;
+  background: #fff;
   border: 1px solid var(--line);
+  padding: 0.5rem;
 }
 
 .cert-item figcaption{
-  margin-top: 0.7rem;
-  font-size: 0.68rem;
+  margin-top: 0.85rem;
+  font-size: 0.78rem;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--muted);
-  line-height: 1.4;
+  line-height: 1.45;
+}
+
+/* The last (5th) certificate spans and centers on its own row so the
+   grid doesn't leave an awkward lone item hugging the left edge. */
+.cert-gallery .cert-item:last-child{
+  grid-column: 2 / 3;
 }
 
 /* ===================== CONTACT ===================== */
@@ -710,9 +700,13 @@ h2{ font-size: clamp(2.4rem, 4.4vw, 3.6rem); }
   .achievements-grid{ grid-template-columns: 1fr; }
 
   .cert-gallery{ grid-template-columns: repeat(2, 1fr); }
+  .cert-gallery .cert-item:last-child{ grid-column: 1 / -1; max-width: 60%; margin: 0 auto; }
 }
 
 @media (max-width: 560px){
   .section-container{ padding: 0 1.5rem; }
   .nav-container{ padding: 0 1.5rem; }
+
+  .cert-gallery{ grid-template-columns: 1fr; }
+  .cert-gallery .cert-item:last-child{ grid-column: auto; max-width: 100%; }
 }
